@@ -6,7 +6,7 @@
             src='https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions/workflows/lint.yml/badge.svg'
             alt='pipeline status'
             height='30'
-            width='30'>
+            width='120'>
     </a>
     <a
     href='https://steamcommunity.com/market/'>
@@ -61,7 +61,6 @@ Clone the project repository using Git:
 
 ```bash
 git clone url---------------------------------------
-cd team ?????????????????????????????
 ```
 
 ### 🖥 Step 2: Create and activate a virtual environment
