@@ -1,0 +1,9 @@
+[flake8]
+max-line-length = 79
+import-order-style = google
+exclude =  venv/, env/, .git, __pycache__, venv
+max-complexity = 10
+max-expression-complexity = 7
+
+[flake8-quotes]
+quote-style = single
