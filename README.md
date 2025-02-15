@@ -1,12 +1,13 @@
 # Steam Market Scraper Parser
 <p>
-    <a
+    <a style="text-decoration: none; color: inherit;"
     href='https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions/workflows/lint.yml/'>
         <img
             src='https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions/workflows/lint.yml/badge.svg'
             alt='pipeline status'
             height='30'
-            width='120'>
+            width='140'
+            >
     </a>
     <a
     href='https://steamcommunity.com/market/'>
@@ -60,7 +61,7 @@ Before you start, make sure that the following components are installed on your 
 Clone the project repository using Git:
 
 ```bash
-git clone url---------------------------------------
+git clone https://github.com/RandomProgramm3r/Steam-Market-Scraper
 ```
 
 ### 🖥 Step 2: Create and activate a virtual environment
