@@ -54,22 +54,6 @@ class ValidateParameters(unittest.TestCase):
                 'USD',
             )
 
-    def test_market_scraper_invalid_app_id_without_value(self):
-        with self.assertRaises(TypeError):
-            scraper.market_scraper(
-                'Dreams & Nightmares Case',
-                data.Apps.CS2,
-                data.Currency.USD.value,
-            )
-
-    def test_market_scraper_invalid_currency_without_value(self):
-        with self.assertRaises(TypeError):
-            scraper.market_scraper(
-                'Dreams & Nightmares Case',
-                data.Apps.CS2.value,
-                data.Currency.USD,
-            )
-
     def test_market_scraper_item_name_consist_solely_of_whitespace(self):
         with self.assertRaises(ValueError):
             scraper.market_scraper(

@@ -1,7 +1,7 @@
 import enum
 
 
-class Apps(enum.Enum):
+class Apps(enum.IntEnum):
     TEAM_FORTRESS_2 = 440
     DOTA_2 = 570
     CS2 = 730
@@ -10,7 +10,7 @@ class Apps(enum.Enum):
     PUBG = 578080
 
 
-class Currency(enum.Enum):
+class Currency(enum.IntEnum):
     # ISO 4217
     USD = 1  # United States dollar
     GBP = 2  # Pound sterling
