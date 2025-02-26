@@ -106,8 +106,8 @@ If there are any changes, I recommend using linters:
 
 ```bash
 flake8 . --count --show-source --statistics # Use to view PEP8 errors.
-black . --check --verbose -- # Use to format code.
-isort . --verbose  # Use to format the order of imports.
+black . --verbose # Use to format code.
+isort . --verbose # Use to format the order of imports.
 ```
 
 
