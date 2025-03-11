@@ -5,9 +5,9 @@
 	align-items: center;">
   <a 
 	style="text-decoration: none; color: inherit; margin-right:10px;" 
-    href="https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions/workflows/lint.yml/">
+    href="https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions/workflows/linting.yml/">
     <img 
-        src="https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions/workflows/lint.yml/badge.svg" 
+        src="https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions/workflows/linting.yml/badge.svg" 
         alt="pipeline status" 
         height="30" 
         width="140">
@@ -105,6 +105,7 @@ Now you can use the parser.
 If there are any changes, I recommend using linters:
 
 ```bash
+
 flake8 . --count --show-source --statistics # Use to view PEP8 errors.
 black . --verbose # Use to format code.
 isort . --verbose # Use to format the order of imports.
