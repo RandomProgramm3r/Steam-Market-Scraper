@@ -5,7 +5,6 @@ class Apps(enum.IntEnum):
     TEAM_FORTRESS_2 = 440
     DOTA_2 = 570
     CS2 = 730
-    STEAM = 753
     RUST = 252490
     PUBG = 578080
 
