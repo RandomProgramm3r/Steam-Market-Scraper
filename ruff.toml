@@ -1,0 +1,25 @@
+line-length = 79
+exclude = ["migrations", "venv"]
+
+
+[lint]
+select = ["N", "F", "W", "E", "I", "Q", "TID", "COM", "C4", "ERA", "RET", "PTH", "ISC", "C90", "SIM"]
+
+
+[format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+
+[lint.isort]
+force-sort-within-sections = true
+
+
+[lint.flake8-quotes]
+inline-quotes = "single"
+
+
+[lint.flake8-tidy-imports]
+ban-relative-imports = "all"

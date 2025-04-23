@@ -30,8 +30,8 @@
 	- [📂 Step 1: Clone the Repository](#-step-1-clone-the-repository)
 	- [🖥 Step 2: Create and activate a virtual environment](#-step-2-create-and-activate-a-virtual-environment)
 	- [🔃 Step 3: Installing Dependencies](#-step-3-installing-dependencies)
-		- [🛠️ Dependencies for development (dev)](#%EF%B8%8F-dependencies-for-development-dev)
-- [⚙ Linters](#-linters)
+
+- [⚙ Code Quality](#-code-quality)
 - [🧩 Usage](#-usage)
 - [🔨 Function Signature](#-function-signature)
 - [📤 Example](#-example)
@@ -84,31 +84,26 @@ source venv/Scripts/activate # Windows
 
 ### 🔃 Step 3: Installing Dependencies
 
-Dependencies are divided into two groups:
-
-- **For development (dev)** – additional dependencies for development.
-- **For code analysis (flake8)** – additional dependencies for code analysis.
-
-#### 🛠️ Dependencies for development (dev)
-
-Install the dependencies for local development (they include all **flake8** dependencies)
+Install the dependencies for local development:
 
 ```bash
-pip install -r requirements/dev.txt
+pip install -r requirements.txt
 ```
 
-Now you can use the parser. 
 
+## ⚙ Code Quality
 
-## ⚙ Linters
-
-If there are any changes, I recommend using linters:
+For code consistency and quality checks, use Ruff - a unified linter/formatter:
 
 ```bash
+# Run linting checks.
+ruff check .
 
-flake8 . --count --show-source --statistics # Use to view PEP8 errors.
-black . --verbose # Use to format code.
-isort . --verbose # Use to format the order of imports.
+# Auto-fix fixable lint issues
+ruff check . --fix
+
+# Format code.
+ruff format .
 ```
 
 
