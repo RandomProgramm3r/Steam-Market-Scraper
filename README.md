@@ -1,29 +1,9 @@
 # Steam Market Scraper Parser
 
-<div 
-	style="display: flex; 
-	align-items: center;">
-  <a 
-	style="text-decoration: none; color: inherit; margin-right:10px;" 
-    href="https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions/workflows/linting.yml/">
-    <img 
-        src="https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions/workflows/linting.yml/badge.svg" 
-        alt="pipeline status" 
-        height="30" 
-        width="140">
-  </a>
-  <a 
-    href="https://steamcommunity.com/market/">
-    <img 
-        src="https://steamcommunity.com/favicon.ico" 
-        alt="Steam logo" 
-        height="30" 
-        width="30">
-  </a>
-</div>
+[![Linting](https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions/workflows/linting.yml/badge.svg)](https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions)
+[<img src="https://steamcommunity.com/favicon.ico" width="20" alt="Steam Community Market" />](https://steamcommunity.com/market/)
 
 ## TOC
-
 - [📋 Description](#-description)
 - [💻 Requirements](#-requirements)
 - [🚀 Project Installation](#-project-installation)
