@@ -1,6 +1,8 @@
-# Steam Market Scraper Parser
+# Steam Market Parser
 
 [![Linting](https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions/workflows/linting.yml/badge.svg)](https://github.com/RandomProgramm3r/Steam-Market-Scraper/actions)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [<img src="https://steamcommunity.com/favicon.ico" width="20" alt="Steam Community Market" />](https://steamcommunity.com/market/)
 
 ## TOC
@@ -15,6 +17,8 @@
 - [🧩 Usage](#-usage)
 - [🔨 Function Signature](#-function-signature)
 - [📤 Example](#-example)
+    - [🔁 Synchronous usage](#-synchronous-usage)
+    - [⚡ Asynchronous usage](#-asynchronous-usage)
 
 
 ## 📋 Description
@@ -77,13 +81,13 @@ For code consistency and quality checks, use Ruff - a unified linter/formatter:
 
 ```bash
 # Run linting checks.
-ruff check .
+ruff check
 
 # Auto-fix fixable lint issues
-ruff check . --fix
+ruff check --fix
 
 # Format code.
-ruff format .
+ruff format
 ```
 
 
@@ -115,12 +119,12 @@ def market_scraper(
 
 ## 📤 Example
 
+### 🔁 Synchronous usage
 ```python
 import data
 import scraper
 
 # Example usage: Fetch price information for 'Dreams & Nightmares Case' in USD for the CS2 app.
-# see more in examples.py
 print(
     scraper.market_scraper(
         'Dreams & Nightmares Case',
@@ -131,10 +135,58 @@ print(
 ```
 #### Output json data:
 ```json
+{   
+    "success": true,
+    "lowest_price": "$2.19",
+    "volume": "112,393",
+    "median_price": "$2.16",
+    "game_name": "CS2",
+    "currency_name": "USD",
+    "item_name": "Dreams & Nightmares Case"
+}
+```
+
+### ⚡ Asynchronous usage
+
+#### see more in examples.py
+```python
+async def main():
+    items = [
+        ('Dreams & Nightmares Case', data.steam_data.Apps.CS2.value, data.steam_data.Currency.USD.value),
+        ('Mann Co. Supply Crate Key', data.steam_data.Apps.TEAM_FORTRESS_2.value, data.steam_data.Currency.EUR.value),
+        ...
+    ]
+
+    tasks = [
+        src.scraper.async_.market_scraper_async(name, app_id, currency)
+        for name, app_id, currency in items
+    ]
+    results = await asyncio.gather(*tasks)
+    for result in results:
+        print(result)
+
+if __name__ == '__main__':
+    asyncio.run(main())
+```
+
+#### Output json data:
+```json
+{
+    "success": true,        
+    "lowest_price": "$2.19",
+    "volume": "112,393",
+    "median_price": "$2.16",
+    "game_name": "CS2",
+    "currency_name": "USD",
+    "item_name": "Dreams & Nightmares Case"
+}
 {
     "success": true,
-    "lowest_price": "$1.90",
-    "volume": "77,555",
-    "median_price": "$1.90"
+    "lowest_price": "2,01€",
+    "volume": "18,776",
+    "median_price": "2,03€",
+    "game_name": "TEAM_FORTRESS_2",
+    "currency_name": "EUR",
+    "item_name": "Mann Co. Supply Crate Key"
 }
 ```
