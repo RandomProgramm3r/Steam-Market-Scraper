@@ -14,8 +14,8 @@
 	- [🔃 Step 3: Installing Dependencies](#-step-3-installing-dependencies)
 
 - [⚙ Code Quality](#-code-quality)
-- [🧪 Testing](-testing)
-    - [📂 Run all tests](-run-all-tests)
+- [🧪 Testing](#-testing)
+    - [📂 Run all tests](#-run-all-tests)
 - [🧩 Usage](#-usage)
 - [🔨 Function Signature](#-function-signature)
 - [📤 Example](#-example)
