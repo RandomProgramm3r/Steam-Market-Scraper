@@ -148,7 +148,7 @@ print(
 
 ### ⚡ Asynchronous usage
 
-#### see more in examples.py
+#### see more in [examples.py](examples.py)
 ```python
 async def main():
     items = [
