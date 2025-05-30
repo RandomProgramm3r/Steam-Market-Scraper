@@ -9,11 +9,13 @@
 - [📋 Description](#-description)
 - [💻 Requirements](#-requirements)
 - [🚀 Project Installation](#-project-installation)
-	- [📂 Step 1: Clone the Repository](#-step-1-clone-the-repository)
+	- [🎶 Step 1: Clone the Repository](#-step-1-clone-the-repository)
 	- [🖥 Step 2: Create and activate a virtual environment](#-step-2-create-and-activate-a-virtual-environment)
 	- [🔃 Step 3: Installing Dependencies](#-step-3-installing-dependencies)
 
 - [⚙ Code Quality](#-code-quality)
+- [🧪 Testing](-testing)
+    - [📂 Run all tests](-run-all-tests)
 - [🧩 Usage](#-usage)
 - [🔨 Function Signature](#-function-signature)
 - [📤 Example](#-example)
@@ -88,6 +90,16 @@ ruff check --fix
 
 # Format code.
 ruff format
+```
+
+## 🧪 Testing
+
+### 📂 Run all tests
+
+##### To run the tests, execute the command
+```bash
+python3 -m unittest discover -v # Linux
+python -m unittest discover -v # Windows
 ```
 
 
